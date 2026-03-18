@@ -196,16 +196,16 @@ create_new_vm() {
     done
 
     while true; do
-        read -p "$(print_status "INPUT" "Enter username (default: suto): ")" USERNAME
-        USERNAME="${USERNAME:-suto}"
+        read -p "$(print_status "INPUT" "Enter username (default: ubuntu): ")" USERNAME
+        USERNAME="${USERNAME:-ubuntu}"
         if validate_input "username" "$USERNAME"; then
             break
         fi
     done
 
     while true; do
-        read -s -p "$(print_status "INPUT" "Enter password (default: suto): ")" PASSWORD
-        PASSWORD="${PASSWORD:-suto}"
+        read -s -p "$(print_status "INPUT" "Enter password (default: ubuntu): ")" PASSWORD
+        PASSWORD="${PASSWORD:-ubuntu}"
         echo
         if [ -n "$PASSWORD" ]; then
             break
@@ -215,8 +215,8 @@ create_new_vm() {
     done
 
     while true; do
-        read -p "$(print_status "INPUT" "Disk size (default: 100G): ")" DISK_SIZE
-        DISK_SIZE="${DISK_SIZE:-100G}"
+        read -p "$(print_status "INPUT" "Disk size (default: 90G): ")" DISK_SIZE
+        DISK_SIZE="${DISK_SIZE:-90G}"
         if validate_input "size" "$DISK_SIZE"; then
             break
         fi
@@ -231,8 +231,8 @@ create_new_vm() {
     done
 
     while true; do
-        read -p "$(print_status "INPUT" "Number of CPUs (default: 7): ")" CPUS
-        CPUS="${CPUS:-7}"
+        read -p "$(print_status "INPUT" "Number of CPUs (default: 5): ")" CPUS
+        CPUS="${CPUS:-5}"
         if validate_input "number" "$CPUS"; then
             break
         fi
