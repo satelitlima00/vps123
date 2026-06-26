@@ -90,7 +90,7 @@ case $choice in
     cd
     rm -rf myapp
     rm -rf flutter
-    
+    cd vps123
     if [ ! -d ".idx" ]; then
       mkdir .idx
       cd .idx
